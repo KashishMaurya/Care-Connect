@@ -14,13 +14,14 @@ import Dashboard from "./pages/Dashboard";
 import CreateProfile from "./pages/CreateProfile";
 import EditProfile from "./pages/EditProfile";
 import Settings from "./pages/Settings";
+import ProfilePublicView from "./pages/ProfilePublicView"; 
 
 // SuperTokens init
 SuperTokens.init({
   appInfo: {
     appName: "CareConnect",
-    apiDomain: import.meta.env.VITE_API_URL, // http://localhost:5000
-    websiteDomain: window.location.origin, // http://localhost:5173
+    apiDomain: "http://localhost:5000", // backend
+    websiteDomain: "http://localhost:5173", // frontend
     apiBasePath: "/auth",
     websiteBasePath: "/auth",
   },
@@ -40,7 +41,7 @@ SuperTokens.init({
 function App() {
   const superTokensRoutes = getSuperTokensRoutesForReactRouterDom(
     reactRouterDom,
-    [EmailPasswordPreBuiltUI]
+    [EmailPasswordPreBuiltUI],
   );
 
   return (
@@ -50,10 +51,10 @@ function App() {
         {superTokensRoutes.map((route, i) => (
           <Route key={i} {...route.props} />
         ))}
-
         {/* Public Routes */}
         <Route path="/" element={<LandingPage />} />
         <Route path="/learn-more" element={<LearnMore />} />
+        <Route path="/profile/:id" element={<ProfilePublicView />} />
 
         {/* Protected Routes using SessionAuth */}
         <Route

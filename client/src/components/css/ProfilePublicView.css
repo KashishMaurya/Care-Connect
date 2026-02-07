@@ -1,52 +1,75 @@
 .public-profile-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   padding: 2rem;
-  background: #f0f4f8;
   display: flex;
   justify-content: center;
-}
-
-.id-card {
-  display: flex;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  padding: 2rem;
-  max-width: 900px;
-  width: 100%;
-  gap: 2rem;
-  flex-wrap: wrap;
   align-items: center;
 }
 
+.id-card {
+  background: white;
+  max-width: 600px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
 .id-card-photo {
-  width: 200px;
-  height: 200px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
   object-fit: cover;
-  border-radius: 12px;
-  border: 3px solid #007bff;
+  display: block;
+  margin: 2rem auto 1rem;
+  border: 5px solid #007bff;
 }
 
 .id-card-content {
-  flex: 1;
-  min-width: 250px;
+  padding: 0 2rem 2rem;
 }
 
 .id-card-content h2 {
-  margin-bottom: 0.8rem;
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .id-card-content p {
-  margin: 0.4rem 0;
-  font-size: 0.95rem;
+  margin: 0.75rem 0;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.id-card-content strong {
+  color: #333;
+  font-weight: 600;
 }
 
 .qr-section {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid #f0f0f0;
   text-align: center;
 }
 
 .qr-caption {
-  font-size: 0.8rem;
-  color: #666;
   margin-top: 0.5rem;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+@media print {
+  .public-profile-wrapper {
+    background: white;
+    padding: 0;
+  }
+  
+  .id-card {
+    box-shadow: none;
+    max-width: 100%;
+  }
 }
