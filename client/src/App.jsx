@@ -21,7 +21,7 @@ SuperTokens.init({
   appInfo: {
     appName: "CareConnect",
     apiDomain: "https://care-connect-skm2.onrender.com", //"http://localhost:5000", // backend
-    websiteDomain: "care-connect-sand-five.vercel.app",  //"http://localhost:5173", // frontend
+    websiteDomain: "https://care-connect-sand-five.vercel.app",  //"http://localhost:5173", // frontend
     apiBasePath: "/auth",
     websiteBasePath: "/auth",
   },
