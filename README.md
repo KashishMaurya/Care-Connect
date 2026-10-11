@@ -120,9 +120,9 @@ npm run dev
 
 **server/.env Example:**
 ```env
-PORT=5000
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/careconnect
-JWT_SECRET=your-super-secret-jwt-key-at-least-32-characters-long
+PORT=****
+MONGODB_URI=****
+JWT_SECRET=****
 
 CLOUDINARY_CLOUD_NAME=your_cloud_name
 CLOUDINARY_API_KEY=your_api_key
@@ -308,24 +308,6 @@ Contributions are welcome! Please follow these steps:
 3. Commit changes (`git commit -m 'Add AmazingFeature'`)
 4. Push to branch (`git push origin feature/AmazingFeature`)
 5. Open Pull Request
-
----
-
-## 📞 Support
-
-For issues or questions:
-* Open an issue on GitHub
-* Email: support@careconnect.example.com
-* Documentation: https://docs.careconnect.example.com
-
----
-
-## 🙏 Acknowledgments
-
-* SuperTokens for authentication framework
-* Cloudinary for media management
-* MongoDB Atlas for database hosting
-* Vercel & Render for deployment platforms
 
 ---
 
