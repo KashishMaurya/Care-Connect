@@ -20,8 +20,8 @@ import ProfilePublicView from "./pages/ProfilePublicView";
 SuperTokens.init({
   appInfo: {
     appName: "CareConnect",
-    apiDomain: "http://localhost:5000", // backend
-    websiteDomain: "http://localhost:5173", // frontend
+    apiDomain: "https://care-connect-skm2.onrender.com", //"http://localhost:5000", // backend
+    websiteDomain: "care-connect-sand-five.vercel.app",  //"http://localhost:5173", // frontend
     apiBasePath: "/auth",
     websiteBasePath: "/auth",
   },

@@ -30,7 +30,8 @@ supertokens.init({
   recipeList: [
     EmailPassword.init(),
     Session.init({
-      cookieSecure: false,
+      cookieSecure: true,
+      cookieSameSite: "none",
     }),
   ],
 });
@@ -41,7 +42,7 @@ const PORT = process.env.PORT || 5000;
 // CORS Configuration
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://digital-id-three.vercel.app",
+  "care-connect-sand-five.vercel.app",
   process.env.WEBSITE_DOMAIN,
 ].filter(Boolean);
 
